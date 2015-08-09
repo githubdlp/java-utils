@@ -1,9 +1,9 @@
-package com.dlp.social.java_utils;
+package com.dlp.java.utils;
 
 import java.awt.geom.Point2D;
 
 /**
- * This class checks if a given point lies inside or outside of a polygon
+ * This class checks if a given point lies inside or outside of a polygon.
  * 
  * @author dlp
  *
@@ -15,6 +15,14 @@ public class PointInPolygonChecker {
 		this.polygonCordinates = polygonCordinates;
 	}
 
+	/**
+	 * Checks if the point lies inside/outside of polygon. Point on the boundary
+	 * of the polygon is considered as outside
+	 * 
+	 * @param testPoint
+	 *            point in test
+	 * @return true if point lies inside polygon, false otherwise
+	 */
 	public boolean containsByAlgorithmA(Point2D.Double testPoint) {
 		boolean result = false;
 		for (int i = 0, j = polygonCordinates.length - 1; i < polygonCordinates.length; j = i++) {
@@ -30,6 +38,14 @@ public class PointInPolygonChecker {
 		return result;
 	}
 
+	/**
+	 * Checks if the point lies inside/outside of polygon. Point on the boundary
+	 * of the polygon is considered as inside
+	 * 
+	 * @param testPoint
+	 *            point in test
+	 * @return true if point lies inside polygon, false otherwise
+	 */
 	public boolean containsByAlgorithmB(Point2D.Double testPoint) {
 		boolean oddNodes = false;
 		int j = polygonCordinates.length - 1;

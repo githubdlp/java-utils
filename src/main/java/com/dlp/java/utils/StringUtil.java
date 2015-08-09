@@ -1,4 +1,4 @@
-package com.dlp.social.java_utils;
+package com.dlp.java.utils;
 
 public class StringUtil {
 	public String reverse(String input) {

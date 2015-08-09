@@ -4,6 +4,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.dlp.java.utils.StringUtil;
+
 public class StringUtilTest {
 
 	private StringUtil stringUtil = null;
